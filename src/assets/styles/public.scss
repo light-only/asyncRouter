@@ -1,0 +1,41 @@
+$mian_color: rgb(179, 162, 199);
+$weightMain_color:rgb(96, 74, 123);
+$contrast_color:white;
+
+.mian_color{
+    color: $mian_color;
+}
+
+.white_color{
+    color:$contrast_color
+}
+
+body{
+    margin: 0;
+}
+.header_container {
+    position: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $mian_color;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+.logo {
+    font-size: 24px;
+    font-weight: 600px;
+}
+}
+.el-header {
+    background-color:$mian_color !important;
+    color: #333;
+    line-height: 60px;
+}
+.el-aside {
+    height: calc(100vh - 60px) !important;
+    background: $weightMain_color;
+}
+.el-menu {
+    border-right:0 !important
+}

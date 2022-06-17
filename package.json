@@ -1,0 +1,26 @@
+{
+  "name": "router",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "element-plus": "^2.2.5",
+    "js-cookie": "^3.0.1",
+    "nprogress": "^0.2.0",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "crypto-js": "^4.1.1",
+    "element-plus": "^2.2.5",
+    "lib-flexible": "^0.3.2",
+    "sass": "^1.52.3",
+    "vite": "^2.9.9"
+  }
+}
