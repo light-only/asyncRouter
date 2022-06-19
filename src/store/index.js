@@ -5,6 +5,7 @@ import permission from './modules/permission';
 import settings from './modules/settings'
 const store = createStore({
     modules:{
+        app,
         user,
         permission,
         settings

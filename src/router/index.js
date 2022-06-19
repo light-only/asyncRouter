@@ -7,6 +7,7 @@ export const constantRoutes = [
     path: '',//根目录路由为/
     component: Layout,//指定使用Layout组件布局
     redirect: '',//重定向至/home页面
+    hidden:true,
     children: [{//子菜单信息
       path: '',//路径
       name: 'home',
@@ -17,6 +18,7 @@ export const constantRoutes = [
   {
     path: '/login',
     name: 'login',
+    hidden: true,
     component: () => import('@/views/login')
   }
 ];

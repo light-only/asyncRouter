@@ -1,36 +1,17 @@
 <template>
-
-  <el-container class="contanier_box">
-    <!-- 头部 -->
-    <el-header>
-      <Header></Header>
-    </el-header>
-    <!-- 头部下面的内容 -->
+  <div class="common-layout">
     <el-container>
-      <!-- 侧边导航 -->
-      <el-aside width='205px'
-                class="sliber_box">
-        <Sliber></Sliber>
+      <el-aside width="250px">
+        <sidebar></sidebar>
       </el-aside>
-      <!-- 主要内容 -->
       <el-main>
-        <router-view></router-view>
+        <app-main></app-main>
       </el-main>
     </el-container>
-  </el-container>
-
+  </div>
 </template>
 
-<script>
-import Sliber from './components/sliber.vue'
-import Header from './components/header.vue'
-export default {
-  components: {
-    Sliber,
-    Header
-  }
-}
+<script setup>
+import sidebar from './components/sidebar'
+import AppMain from './components/AppMain'
 </script>
-
-<style lang="scss" scoped>
-</style>

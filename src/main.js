@@ -2,8 +2,10 @@ import { createApp } from 'vue'
 import Cookies from 'js-cookie'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
+//全局
 import locale from 'element-plus/lib/locale/lang/zh-cn' // 中文语言
 import 'element-plus/dist/index.css'
+import '@/assets/styles/index.scss'
 import router from './router'
 import store from './store'
 import './permission' // permission control
