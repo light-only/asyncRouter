@@ -1,6 +1,6 @@
 import {login,getInfo,layout} from "@/api/login";
 import { ElMessage } from 'element-plus'
-import {getToken, removeToken, setToken} from '@/utils/auth.js'
+import {getToken, removeToken, setToken,setTokenTime} from '@/utils/auth.js'
 import defAve from '@/assets/profile.jpg'
 const user = {
     state :{
@@ -46,6 +46,7 @@ const user = {
                             type: 'success',
                         });
                         setToken(res.token);
+                        setTokenTime();
                         commit('SET_TOKEN',res.token);
                         resolve(res);
                     }else{
@@ -85,6 +86,7 @@ const user = {
             return new Promise((resolve,reject)=>{
                 layout(state.token).then(res=>{
                     commit('SET_TOKEN','');
+                    localStorage.clear();
                     commit('SET_ROLES',[]);
                     commit('SET_PERMISSION',[]);
                     removeToken();
