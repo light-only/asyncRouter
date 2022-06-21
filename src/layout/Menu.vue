@@ -7,6 +7,7 @@
       text-color="#fff"
       router
       unique-opened
+      :collapse="!$store.getters.sidebarType"
   >
     <el-sub-menu :index="(index+1).toString()" v-for="(item,index) in menusList" :key="index">
       <template #title>

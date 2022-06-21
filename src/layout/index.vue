@@ -1,23 +1,16 @@
 <template>
   <el-container class="app-wrapper" >
-      <el-aside width="200px" class="sidebar-container">
-        <div style="text-align:center;margin-top: 20px;color: #FFFFFF;width: 100%;height: 80px">
-          <el-icon><Avatar /></el-icon><div style="margin-left: 10px">后台管理系统</div>
+      <el-aside :width="asideWidth" class="sidebar-container">
+        <div style="text-align:center;margin-top: 15px;color: #FFFFFF;width: 100%;height: 80px">
+          <el-icon><Avatar /></el-icon><div v-if="$store.getters.sidebarType" style="margin-left: 10px">后台管理系统</div>
         </div>
         <Menu />
       </el-aside>
-      <el-container class="container">
+      <el-container class="container" :class="{hidderContainer:!$store.getters.sidebarType}">
         <el-header class="header-container">
-          <el-breadcrumb separator="/">
-            <el-breadcrumb-item :to="{ path: '/' }">homepage</el-breadcrumb-item>
-            <el-breadcrumb-item
-            ><a href="/">promotion management</a></el-breadcrumb-item
-            >
-            <el-breadcrumb-item>promotion list</el-breadcrumb-item>
-            <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
-          </el-breadcrumb>
+          <Header/>
         </el-header>
-        <el-main style="background: #fff">
+        <el-main style="background: #fff;margin: 0 15px">
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -26,6 +19,14 @@
 
 <script setup>
 import Menu from './Menu'
+import {computed, ref} from 'vue'
+import Header from './header/index'
+import {useStore} from "vuex";
+const store = useStore();
+
+const asideWidth = computed(()=>{
+  return store.getters.sidebarType === true? '180px' : '67px'
+})
 </script>
 
 
