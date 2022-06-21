@@ -15,5 +15,12 @@ export default defineConfig({
 
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/assets/styles/index.scss";',
+      }
+    }
+  },
 })

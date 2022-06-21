@@ -10,4 +10,8 @@ import { RouterView } from 'vue-router'
 
 @import './assets/styles/public.scss';
 
+*{
+  margin: 0;
+  padding: 0;
+}
 </style>

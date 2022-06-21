@@ -1,3 +1,11 @@
 <template>
-   <div> 表单构建 <svg-icon icon-class="build" /> </div>
+  <h1>这是表单页面</h1>
 </template>
+
+<script setup>
+
+</script>
+
+<style>
+
+</style>
