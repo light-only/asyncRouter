@@ -4,12 +4,13 @@ import Layout from '@/layout'
 //静态路由
 export const constantRoutes = [
   {
-    path: '',//根目录路由为/
+    name:"/",
+    path: '/',//根目录路由为/
     component: Layout,//指定使用Layout组件布局
-    redirect: '',//重定向至/home页面
+    redirect: '/',//重定向至/home页面
     hidden:true,
     children: [{//子菜单信息
-      path: '',//路径
+      path: '/',//路径
       name: 'home',
       component: () => import('@/views/home'),//指定组件
       meta: { title: '首页', access: 0, affix: true }

@@ -6,7 +6,7 @@ export function getRouters(){
             {
                 "name": "Tool",
                 "path": "/tool",
-                "redirect": "noRedirect",
+                // "redirect": "noRedirect",
                 "component": "Layout",
                 "alwaysShow": true,
                 "meta": {
