@@ -2,6 +2,7 @@ import {login,getInfo,layout} from "@/api/login";
 import { ElMessage } from 'element-plus'
 import {getToken, removeToken, setToken,setTokenTime} from '@/utils/auth.js'
 import defAve from '@/assets/profile.jpg'
+import router from '@/router'
 const user = {
     state :{
         token:getToken(),
@@ -90,7 +91,8 @@ const user = {
                     commit('SET_ROLES',[]);
                     commit('SET_PERMISSION',[]);
                     removeToken();
-                    resolve();
+                    resolve(res);
+                    router.replace('/login');
                 }).catch(error=>{
                     reject(error);
                 })

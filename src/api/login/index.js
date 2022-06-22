@@ -41,9 +41,9 @@ export function getInfo(){
 export function layout(token){
     return new Promise((resolve,reject)=>{
         if(token){
-            resolve()
+            resolve('退出登录成功')
         }else{
-            reject('请求失败')
+            reject('')
         }
     })
 }

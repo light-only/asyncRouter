@@ -52,10 +52,10 @@ const asideWidth = computed(()=>{
   z-index: 9;
   transition: all 0.28s;
   .header-container{
-    background: #fff;
-    margin-bottom: 15px;
     height: 50px;
     line-height: 50px;
+    background: #fff;
+    margin-bottom: 15px;
     padding: 0 10px;
     ::v-deep .el-breadcrumb{
       line-height: unset;
