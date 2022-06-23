@@ -1,7 +1,7 @@
 <template>
   <el-breadcrumb separator="/">
     <el-breadcrumb-item v-for="(item,index) in breadCrumbList" key="index">
-      <span v-if="index===length - 1" class="noRedirect">{{item.name}}</span>
+      <span v-if="index===breadCrumbList.length - 1" class="noRedirect">{{item.name}}</span>
       <span v-else class="redirect" @click="handleRedirect(item.path)">{{item.name}}</span>
     </el-breadcrumb-item>
   </el-breadcrumb>

@@ -24,15 +24,15 @@ import avatar from './components/avatar'
   display: flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
-}
-.nav-right{
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  .nav-right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
+  }
 }
+
 </style>
 
 
