@@ -2,8 +2,7 @@
   <el-breadcrumb separator="/">
     <el-breadcrumb-item v-for="(item,index) in breadCrumbList" key="index">
       <span v-if="index===breadCrumbList.length - 1" class="noRedirect">{{$t(`menus.${item.name}`)}}</span>
-      <span v-else-if="" class="redirect" @click="handleRedirect(item.path)">{{$t(`menus.${!item.name?'/':item.name}`)}}</span>
-      <span v-else-if="" class="redirect" @click="handleRedirect(item.path)">{{$t(`menus.${!item.name?'/':item.name}`)}}</span>
+      <span v-else class="redirect" @click="handleRedirect(item.path)">{{$t(`menus.${!item.name?'/':item.name}`)}}</span>
     </el-breadcrumb-item>
   </el-breadcrumb>
 </template>

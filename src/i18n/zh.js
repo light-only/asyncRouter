@@ -18,7 +18,8 @@ export default {
     appGroup:'应用组管理',
     AssignUser:'分配用户',
     'AssignUser/:id':'分配用户',
-    UserList:'用户管理'
+    UserList:'用户管理',
+    App:'应用中心'
 
   },
   login: {

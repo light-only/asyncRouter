@@ -1,6 +1,5 @@
 <template>
   <el-menu
-
       active-text-color="#ffd04b"
       background-color="#545c64"
       class="el-menu-vertical-demo"
@@ -33,12 +32,10 @@
         </el-menu-item>
       </el-sub-menu>
       <el-menu-item v-else :index="item.children[0].path" :key="item.index" @click="savePath(item.children[0].path)">
-        <template #title>
           <el-icon>
             <component :is="iconList[index]"></component>
           </el-icon>
           <span>{{ $t(`menus.${item.children[0].path}`)}}</span>
-        </template>
       </el-menu-item>
     </template>
 
