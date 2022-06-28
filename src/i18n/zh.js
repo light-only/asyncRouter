@@ -15,7 +15,6 @@ export default {
     HandleRecord:'操作日志',
     DayRecord:'日志管理',
     AppGroup:'应用组管理',
-    appGroup:'应用组管理',
     AssignUser:'分配用户',
     'AssignUser/:id':'分配用户',
     UserList:'用户管理'

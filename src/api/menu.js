@@ -220,7 +220,6 @@ export function getRouters(){
                 "hidden":false,
                 "redirect":"noRedirect",
                 "component":"Layout",
-                // "alwaysShow":"true",
                 "meta":{
                     "title":"应用组管理",
                     "icon":"tool",
@@ -230,7 +229,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"AppGroup",
-                        "path":"appGroup",
+                        "path":"AppGroup",
                         "hidden":false,
                         "component":"appGroup/index",
                         "meta":{
