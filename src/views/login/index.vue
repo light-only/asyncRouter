@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <div class="app-content">
-      <div class="app-image">产业大脑项目</div>
+      <div class="app-image">{{$t('login.title')}}</div>
       <el-form ref="ruleFormRef" :model="ruleForm" status-icon :rules="rules" label-width="120px" class="demo-ruleForm">
         <el-form-item label="用户账号" prop="username">
           <el-input v-model="ruleForm.username" type="username" autocomplete="off" />
@@ -16,20 +16,21 @@
           <el-checkbox v-model="ruleForm.remember">记住密码</el-checkbox>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm()">登录</el-button>
-          <el-button @click="resetForm()">没有注册？，去注册</el-button>
+          <el-button type="primary" @click="submitForm()">{{$t('login.btnTitle')}}</el-button>
+          <el-button @click="resetForm()">{{$t('login.register')}}</el-button>
         </el-form-item>
       </el-form>
     </div>
   </div>
 </template>
 <script setup>
-import {toRefs,getCurrentInstance,reactive} from 'vue';
+import {toRefs,getCurrentInstance,reactive,ref} from 'vue';
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
 import Cookies from 'js-cookie';
 import {encrypt} from "../../utils/jsencrypt.js";
 
+const title = ref('用户登录')
 const store = useStore();
 const router = useRouter();
 const {proxy} = getCurrentInstance();

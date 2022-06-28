@@ -5,8 +5,7 @@ export function getRouters(){
         const menuList = [
             {
                 "name": "Tool",
-                "path": "/tool",
-                // "redirect": "noRedirect",
+                "path": "/Tool",
                 "component": "Layout",
                 "alwaysShow": true,
                 "meta": {
@@ -17,7 +16,7 @@ export function getRouters(){
                 },
                 "children": [{
                     "name": "Build",
-                    "path": "build",
+                    "path": "Build",
                     "component": "tool/build/index",
                     "meta": {
                         "title": "表单构建",
@@ -27,7 +26,7 @@ export function getRouters(){
                     }
                 }, {
                     "name": "Gen",
-                    "path": "gen",
+                    "path": "Gen",
                     "component": "tool/gen/index",
                     "meta": {
                         "title": "代码生成",
@@ -37,7 +36,7 @@ export function getRouters(){
                     }
                 }, {
                     "name": "Swagger",
-                    "path": "swagger",
+                    "path": "Swagger",
                     "component": "tool/swagger/index",
                     "meta": {
                         "title": "系统接口",
@@ -48,29 +47,21 @@ export function getRouters(){
                 }]
             },
             {
-                "name":"",
                 "path":"",
+                'redirect': 'Organization',
                 "hidden":false,
-                "redirect":"/organization",
                 "component":"Layout",
-                // "alwaysShow":"true",
                 "meta":{
-                    "title":"组织管理",
-                    "icon":"tool",
-                    "nocache":false,
-                    "link":null
+                    "title":"组织管理"
                 },
                 "children":[
                     {
                         "name":"Organization",
-                        "path":"organization",
+                        "path":"Organization",
                         "hidden":false,
                         "component":"organization/index",
                         "meta":{
-                            "title":"组织管理",
-                            "icon":"tool",
-                            "nocache":false,
-                            "link":"organization"
+                            "title":"组织管理"
                         }
                     }
                 ]
@@ -79,19 +70,15 @@ export function getRouters(){
                 "name":"",
                 "path":"",
                 "hidden":false,
-                "redirect":"noRedirect",
+                "redirect":"Department",
                 "component":"Layout",
-                // "alwaysShow":"true",
                 "meta":{
                     "title":"部门管理",
-                    "icon":"tool",
-                    "nocache":false,
-                    "link":''
                 },
                 "children":[
                     {
                         "name":"Department",
-                        "path":"department",
+                        "path":"Department",
                         "hidden":false,
                         "component":"department/index",
                         "meta":{
@@ -107,7 +94,7 @@ export function getRouters(){
                 "name":"",
                 "path":"",
                 "hidden":false,
-                "redirect":"noRedirect",
+                "redirect":"Station",
                 "component":"Layout",
                 // "alwaysShow":"true",
                 "meta":{
@@ -119,7 +106,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"Station",
-                        "path":"station",
+                        "path":"Station",
                         "hidden":false,
                         "component":"station/index",
                         "meta":{
@@ -147,7 +134,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"Application",
-                        "path":"application",
+                        "path":"Application",
                         "hidden":false,
                         "component":"application/index",
                         "meta":{
@@ -175,7 +162,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"Menulist",
-                        "path":"menulist",
+                        "path":"Menulist",
                         "hidden":false,
                         "component":"menuList/index",
                         "meta":{
@@ -203,7 +190,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"LoginRecord",
-                        "path":"loginRecord",
+                        "path":"LoginRecord",
                         "hidden":false,
                         "component":"dayRecord/loginRecord/index",
                         "meta":{
@@ -215,7 +202,7 @@ export function getRouters(){
                     },
                     {
                         "name":"HandleRecord",
-                        "path":"handleRecord",
+                        "path":"HandleRecord",
                         "hidden":false,
                         "component":"dayRecord/handleRecord/index",
                         "meta":{
@@ -255,7 +242,7 @@ export function getRouters(){
                     },
                     {
                         "name":"AssignUser",
-                        "path":"assignUser/:id",
+                        "path":"AssignUser/:id",
                         "hidden":true,
                         "component":"appGroup/assignUser/index",
                         "meta":{
@@ -281,7 +268,7 @@ export function getRouters(){
                 "children":[
                     {
                         "name":"UserList",
-                        "path":"userList",
+                        "path":"UserList",
                         "hidden":false,
                         "component":"user/index",
                         "meta":{
