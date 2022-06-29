@@ -12,9 +12,11 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import router from './router'
 import store from './store'
 import './permission' // permission control
+import filters from '@/utils/filters'
 
 const app = createApp(App);
-
+//引入时间格式化
+filters(app);
 //注册图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
