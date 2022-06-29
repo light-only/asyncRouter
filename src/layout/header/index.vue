@@ -3,6 +3,7 @@
     <hamburger/>
     <bread-crumb/>
     <div class="nav-right">
+      <screenful style="margin-right: 20px"/>
       <avatar/>
     </div>
   </div>
@@ -12,6 +13,7 @@
 import Hamburger from './components/hamburger'
 import BreadCrumb from "./components/breadCrumb";
 import avatar from './components/avatar'
+import Screenful from "./components/screenful";
 // 自定义图标
 
 

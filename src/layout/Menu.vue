@@ -37,7 +37,7 @@
             effect="dark"
             :content="item.children[0].meta.title"
             placement="right"
-            offset="32"
+            :offset=offsetValue
         >
           <el-icon>
             <component :is="iconList[index]"></component>
@@ -60,10 +60,10 @@ const icon = ref(['menu','Edit','Files','folder','fold']);
 const defaultRouter = ref(sessionStorage.getItem('path')|| '/tool/build');
 const menusList = ref([]);
 const store = useStore();
-const router = useRouter()
+const router = useRouter();
+const offsetValue = ref(30)
 const initMenusList = async () => {
   menusList.value = await getRouters();
-  console.log(menusList.value);
 }
 
 function savePath(x,y){

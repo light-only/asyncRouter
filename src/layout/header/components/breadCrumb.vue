@@ -12,10 +12,8 @@ import {watch,ref} from "vue";
 const breadCrumbList = ref([]);
 const route = useRoute();
 const router = useRouter();
-console.log(route.matched);
 const initBreadCrumb = ()=>{
   breadCrumbList.value = route.matched;
-  console.log(breadCrumbList.value);
 }
 watch(route,()=>{
   initBreadCrumb();
