@@ -32,9 +32,17 @@
         </el-menu-item>
       </el-sub-menu>
       <el-menu-item v-else :index="item.children[0].path" :key="item.index" @click="savePath(item.children[0].path)">
+        <el-tooltip
+            class="box-item"
+            effect="dark"
+            :content="item.children[0].meta.title"
+            placement="right"
+            offset="32"
+        >
           <el-icon>
             <component :is="iconList[index]"></component>
           </el-icon>
+        </el-tooltip>
           <span>{{ $t(`menus.${item.children[0].path}`)}}</span>
       </el-menu-item>
     </template>
@@ -69,5 +77,9 @@ function savePath(x,y){
 initMenusList()
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+//::v-deep.el-popper.is-dark{
+//  transform: translateX(76px)!important;
+//}
+</style>
 

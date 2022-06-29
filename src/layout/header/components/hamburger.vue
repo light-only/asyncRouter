@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 0 15px;font-size: 22px" @click="handleClick">
+  <div class="ham-content" @click="handleClick">
     <el-icon color="#000" v-if="icon"><IconHomeJiHua/></el-icon>
     <el-icon color="#000" v-else><IconHomeClose /></el-icon>
   </div>
@@ -19,6 +19,12 @@ const icon = computed(()=>{
 })
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.ham-content{
+  margin: 0 15px;
+  font-size: 22px;
+  & ::v-deep .el-icon{
+    vertical-align: -4px;
+  }
+}
 </style>
