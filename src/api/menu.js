@@ -215,8 +215,8 @@ export function getRouters(){
                 ]
             },
             {
-                "name":"",
-                "path":"",
+                "name":"App",
+                "path":"/App",
                 "hidden":false,
                 "redirect":"noRedirect",
                 "component":"Layout",

@@ -13,7 +13,6 @@ import {useStore} from "vuex";
 const store = useStore();
 const handleClick = ()=>{
   store.commit('CHANGE_SIDEBAR_TYPE');
-  console.log(icon)
 }
 const icon = computed(()=>{
   return store.getters.sidebarType == true ? true:false
