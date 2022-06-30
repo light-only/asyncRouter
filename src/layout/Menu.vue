@@ -44,7 +44,7 @@
             <component :is="iconList[index]"></component>
           </el-icon>
         </el-tooltip>
-          <span>{{ $t(`menus.${item.children[0].path}`)}}</span>
+        <span>{{ $t(`menus.${item.children[0].path}`)}}</span>
       </el-menu-item>
     </template>
 
@@ -70,7 +70,7 @@ const initMenusList = async () => {
 }
 //监听路由的变化
 watch(route,()=>{
-  myPath.value = route.matched[1].path;
+  myPath.value =route.matched && route.matched[1] && route.matched[1].path;
 })
 function savePath(x,y){
   if(x && y){
