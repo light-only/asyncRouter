@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+```
+体验账号密码验证码：admin/1234/1234
